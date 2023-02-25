@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head lang="es">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <!--<script src="./js/script.js"></script>-->
+        <title>Formulario</title>
+    </head>
+    <body>
+        <header>
+            <h1>Formulario</h1>
+        </header>
+        <main>
+            <section class="informacion">
+                <form>
+                    <h3>informacion: </h3>
+                    <textarea name="" id="informacion2" cols="30" rows="10" class="cuadro" required></textarea>
+                    <button class="enviar">Mandar</button>
+                </form>
+            </section>
+            <section class="resultado">
+                <div>
+                    <h3>Resultado: </h3>
+                    <textarea name="" id="resultado2" cols="30" rows="10" class="cuadro"></textarea>
+                </div>
+            </section>
+        </main>
+    </body>
+    <script>
+        const entrada = document.querySelector('#informacion2');
+        const boton = document.querySelector('button');
+        const salida = document.querySelector('#resultado2');
+
+        function Mandar(){
+            salida.innerHTML = entrada.value;
+        }
+
+        boton.addEventListener('click', () => {
+            salida.innerHTML = entrada.value
+        })
+    </script>
+</html>
